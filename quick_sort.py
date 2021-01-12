@@ -12,10 +12,10 @@ def quick_sort(arr):
     temp = arr[0]
     arr[0] = arr[current_position] 
     arr[current_position] = temp
-    left = QuickSort(arr[0:current_position]) 
-    right = QuickSort(arr[current_position+1:elements]) 
+    left = quick_sort(arr[0:current_position]) 
+    right = quick_sort(arr[current_position+1:elements]) 
     arr = left + [arr[current_position]] + right
     return arr
 array_to_be_sorted = [4,2,7,3,1,6]
-print("Original Array: ",array_to_be_sorted)
-print("Sorted Array: ",QuickSort(array_to_be_sorted))
+print("unsorted array: ", array_to_be_sorted)
+print("sorted array: ", quick_sort(array_to_be_sorted))
