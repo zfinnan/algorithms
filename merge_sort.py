@@ -1,10 +1,10 @@
-def mergeSort(arr):
+def merge_sort(arr):
     if len(arr) > 1:
         mid = len(arr) // 2
         left = arr[:mid]
         right = arr[mid:]
-        mergeSort(left)
-        mergeSort(right)
+        merge_sort(left)
+        merge_sort(right)
         i = 0
         j = 0
         k = 0
@@ -25,5 +25,5 @@ def mergeSort(arr):
             j += 1
             k += 1
 arr = [54,26,93,17,77,31,44,55,20]
-mergeSort(arr)
+merge_sort(arr)
 print(arr)
